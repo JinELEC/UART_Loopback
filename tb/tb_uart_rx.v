@@ -47,30 +47,30 @@ always@(negedge n_reset, posedge mclk)
 assign rxd = txd;
 
 uart_tx t0(
-    .mclk               (mclk),
-    .n_reset            (n_reset),
-    .baud_max_cnt       (baud_max_cnt),
-    .parity_sel         (parity_sel),
-    .stop_sel           (stop_sel),
-    .tr_data            (tr_data),
-    .send_en            (send_en),
-    .txd                (txd),
-    .done               (done)
+    .mclk               (mclk            ),
+    .n_reset            (n_reset         ),
+    .baud_max_cnt       (baud_max_cnt    ),
+    .parity_sel         (parity_sel      ),
+    .stop_sel           (stop_sel        ),
+    .tr_data            (tr_data         ),
+    .send_en            (send_en         ),
+    .txd                (txd             ),
+    .done               (done            )
 );
 
 uart_rx t1(
-    .mclk               (mclk),
-    .n_reset            (n_reset),
-    .baud_max_cnt       (baud_max_cnt),
-    .parity_sel         (parity_sel),
-    .stop_sel           (stop_sel),
-    .rd_data            (rd_data),
-    .read_en            (read_en),
-    .rd_valid           (rd_valid),
-    .full               (full),
-    .frame_err          (frame_err),
-    .parity_err         (parity_err),
-    .rxd                (rxd)
+    .mclk               (mclk            ),
+    .n_reset            (n_reset         ),
+    .baud_max_cnt       (baud_max_cnt    ),
+    .parity_sel         (parity_sel      ),
+    .stop_sel           (stop_sel        ),
+    .rd_data            (rd_data         ),
+    .read_en            (read_en         ),
+    .rd_valid           (rd_valid        ),
+    .full               (full            ),
+    .frame_err          (frame_err       ),
+    .parity_err         (parity_err      ),
+    .rxd                (rxd             )
 );
 
 endmodule
