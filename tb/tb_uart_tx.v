@@ -39,15 +39,15 @@ initial begin
 end
 
 uart_tx t0(
-    .mclk               (mclk),
-    .n_reset            (n_reset),
-    .baud_max_cnt       (baud_max_cnt),
-    .tr_data            (tr_data),
-    .parity_sel         (parity_sel),
-    .stop_sel           (stop_sel),
-    .send_en            (send_en),
-    .txd                (txd),
-    .done               (done)
+    .mclk               (mclk            ),
+    .n_reset            (n_reset         ),
+    .baud_max_cnt       (baud_max_cnt    ),
+    .tr_data            (tr_data         ),
+    .parity_sel         (parity_sel      ),
+    .stop_sel           (stop_sel        ),
+    .send_en            (send_en         ),
+    .txd                (txd             ),
+    .done               (done            )
 );
 
 endmodule
