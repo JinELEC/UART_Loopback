@@ -147,17 +147,17 @@ always@(negedge n_reset, posedge mclk)
                      ((done_cnt == 3'd5) & (stop_sel == 1'b1) & (stop_bit1 == 1'b0 | stop_bit2 == 1'b0)) ? 1'b1 : frame_err;
     
 // fifo ports
-wire fifo_full;
+wire   fifo_full;
 assign full = fifo_full;
 
-wire fifo_empty;
+wire   fifo_empty;
 assign rd_valid = ~fifo_empty;
 
-wire [7:0] fifo_din = rxd_data;
-wire fifo_write_en = (done_cnt == 3'd2) ? 1'b1 : 1'b0;
-wire fifo_read_en = read_en;
+wire [7:0] fifo_din  =  rxd_data;
+wire       fifo_write_en = (done_cnt == 3'd2) ? 1'b1 : 1'b0;
+wire       fifo_read_en  = read_en;
 wire [7:0] fifo_dout;
-assign rd_data = fifo_dout;
+assign rd_data           = fifo_dout;
 
 fifo_16x8 t0(
     .clk                (mclk),
