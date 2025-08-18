@@ -160,15 +160,16 @@ wire [7:0] fifo_dout;
 assign rd_data           = fifo_dout;
 
 fifo_16x8 t0(
-    .clk                (mclk),
-    .srst               (1'b0),
-    .din                (fifo_din),
-    .wr_en              (fifo_write_en),
-    .rd_en              (fifo_read_en),
-    .dout               (fifo_dout),
-    .full               (fifo_full),
-    .empty              (fifo_empty),
-    .valid              ()
+    fifo_16x8 t0(
+    .clk                (mclk           ),
+    .srst               (1'b0           ),
+    .din                (fifo_din       ),
+    .wr_en              (fifo_write_en  ),
+    .rd_en              (fifo_read_en   ),
+    .dout               (fifo_dout      ),
+    .full               (fifo_full      ),
+    .empty              (fifo_empty     ),
+    .valid              (               )
 );
 
 endmodule
