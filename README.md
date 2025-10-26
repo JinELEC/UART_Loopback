@@ -18,4 +18,4 @@ The data path of UART Loopback starts from PC(PuTTY) -> UART_Rx -> FIFO -> UART_
 
 ## Result
 ![UART_Loopback](doc/UART_Loopback_result.png)
-
+> Although you typed each letter just once, you may feel like each letter is typed twice.
