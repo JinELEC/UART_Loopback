@@ -11,5 +11,11 @@ The data path of UART Loopback starts from PC(PuTTY) -> UART_Rx -> FIFO -> UART_
 - External loopback (PC -> FPGA -> PC) operation
 - Verified via simulation (ILA, VIO) and hardware
 
+## PuTTY Setup
+- Session Tab -> Serial line: COM8, baudrate = 9600
+- Terminal Tab -> Line discipline options -> Local echo -> Force on
+- SSH -> Serial -> Flow control -> None
+
 ## Result
 ![UART_Loopback](doc/UART_Loopback_result.png)
+
